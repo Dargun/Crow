@@ -25,10 +25,14 @@
 var NAVTREE =
 [
   [ "Crow", "index.html", [
-    [ "Namespace Members", "namespacemembers.html", [
-      [ "All", "namespacemembers.html", null ],
-      [ "Functions", "namespacemembers_func.html", null ],
-      [ "Typedefs", "namespacemembers_type.html", null ]
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -37,21 +41,28 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ]
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_tiny_s_h_a1_8hpp_source.html",
-"classcrow_1_1json_1_1wvalue.html#a419c1bd3fdf09d6209ce24193fcb0a8b",
-"structcrow_1_1_session_middleware.html#a65b80dd03c71fe58e56db2df3586725e",
-"structcrow_1_1response.html#a8f5e5caa08c3e658bccd03996e1a778a"
+"",
+"classcrow_1_1json_1_1rvalue.html#a9eb58f152c08db64e400ebf90df2889e",
+"mustache_8h.html#aeb8da2ae9d8d9fe55f6ab0a7455dd667a6a92aa81e0cd0b1c2f77a84226ad4777",
+"namespacecrow.html#afe3a72ef7c3edbf71d0bceacf02517c4add4ec0ac4e58f7c32a01244ae91150b1",
+"structcrow_1_1detail_1_1middleware__call__criteria__dynamic_3_01true_01_4.html#a6f5d720273c0de6ae01a138e0bb84cc6",
+"structcrow_1_1session_1_1_cached_session.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
