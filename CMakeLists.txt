@@ -66,10 +66,10 @@ target_include_directories(Crow
 )
 
 if(CROW_USE_BOOST)
-	find_package(Boost 1.64 COMPONENTS system date_time REQUIRED)
+	find_package(Boost 1.86 COMPONENTS system date_time REQUIRED)
 	target_link_libraries(Crow
 		INTERFACE
-			Boost::boost Boost::system Boost::date_time
+			Boost::system Boost::date_time
 	)
 	target_compile_definitions(Crow INTERFACE CROW_USE_BOOST)
 else()
@@ -221,12 +221,14 @@ include(CPack)
 #####################################
 # Uninstall Files
 #####################################
-if(NOT TARGET uninstall)
-  configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
-    IMMEDIATE @ONLY)
+if(CROW_INSTALL)
+	if(NOT TARGET uninstall)
+	configure_file(
+		"${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
+		"${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+		IMMEDIATE @ONLY)
 
-  add_custom_target(uninstall
-    COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+	add_custom_target(uninstall
+		COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+	endif()
 endif()
